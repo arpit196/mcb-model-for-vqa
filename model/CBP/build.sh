@@ -6,4 +6,4 @@ TF_INC=$(python2.7 -c 'import tensorflow as tf; print(tf.sysconfig.get_include()
 #g++ -std=c++11 -shared -o build/count_sketch.so ops/count_sketch.cc count_sketch.cu.o -fPIC -lcudart -I $TF_INC -D_GLIBCXX_USE_CXX11_ABI=0 -g
 
 mkdir -p build
-g++ -std=c++11 -shared -o build/count_sketch.so ops/count_sketch.cc -fPIC -I -D_GLIBCXX_USE_CXX11_ABI=0 -L$TF_LIB -ltensorflow_framework
+g++ -std=c++11 -shared -o build/count_sketch.so ops/count_sketch.cc -fPIC -I -D_GLIBCXX_USE_CXX11_ABI=0 -L $TF_LIB -ltensorflow_framework
